@@ -75,6 +75,22 @@ class WebXmlObserver
         m_publishedWebApps = new HashMap<URL, WebApp>();
     }
 
+    private static String getDirectParent( URL entry ) 
+    {
+		String path = entry.getPath();
+		int last = path.lastIndexOf('/');
+		if(last > 0) {
+			int first = path.lastIndexOf('/', last - 1);
+			if(first >= 0) {
+				return path.substring(first + 1, last);
+			} else {
+				return path.substring(0, last);				
+			}			
+		} else {
+			return "";
+		}
+    }
+    
     /**
      * Parse the web.xml and publish the corresponding web app.
      * The received list is expected to contain one URL of an web.xml (only frst is used.
@@ -89,6 +105,7 @@ class WebXmlObserver
         NullArgumentException.validateNotNull( bundle, "Bundle" );
         NullArgumentException.validateNotNull( entries, "List of web.xml's" );
         PreConditionException.validateEqualTo( entries.size(), 1, "Number of xml's" );
+        PreConditionException.validateEqualTo( "WEB-INF".compareToIgnoreCase(getDirectParent(entries.get(0))), 0, "Direct parent of web.xml" );
 
         final URL webXmlURL = entries.get( 0 );
         LOG.debug( "Parsing a web application from [" + webXmlURL + "]" );
