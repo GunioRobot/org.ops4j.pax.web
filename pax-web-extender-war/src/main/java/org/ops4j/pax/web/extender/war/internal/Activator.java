@@ -68,7 +68,7 @@ public class Activator
                 	null,
                     "WEB-INF/",
                     "web.xml",
-                    true // do not recurse
+                    true // do recurse
                 ),
                 new WebXmlObserver(
                     new DOMWebXmlParser(),
