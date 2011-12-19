@@ -75,16 +75,16 @@ public class Path
         }
         return replaced;
     }
-    
+
     /**
      * Finds the direct parent of the path of the given URL.
-     * E.g. /parent/file.xml yields parent, 
-     *   but /parent/file.xml/ yields file.xml 
-     * 
+     * E.g. /parent/file.xml yields parent,
+     *   but /parent/file.xml/ yields file.xml
+     *
      * @param entry A location.
      * @return The (bare) parent path.
      */
-    public static String getDirectParent( URL entry ) 
+    public static String getDirectParent( URL entry )
     {
 		String path = entry.getPath();
 		int last = path.lastIndexOf('/');
@@ -93,8 +93,8 @@ public class Path
 			if(first >= 0) {
 				return path.substring(first + 1, last);
 			} else {
-				return path.substring(0, last);				
-			}			
+				return path.substring(0, last);
+			}
 		} else {
 			return "";
 		}

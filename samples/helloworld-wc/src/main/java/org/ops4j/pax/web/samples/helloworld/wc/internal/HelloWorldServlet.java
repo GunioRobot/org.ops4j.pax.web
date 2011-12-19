@@ -40,7 +40,7 @@ public class HelloWorldServlet
          throws ServletException, IOException
    {
       /*
-       * The container DOES NOT create the session if the servlet does not use it at least 
+       * The container DOES NOT create the session if the servlet does not use it at least
        * once, so, we do need the line below in order to create the session properly.
        */
       final HttpSession session = request.getSession();

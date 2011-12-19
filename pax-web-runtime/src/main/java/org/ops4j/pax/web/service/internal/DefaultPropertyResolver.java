@@ -70,7 +70,7 @@ class DefaultPropertyResolver
         }
         //properties.put( PROPERTY_SESSION_TIMEOUT, null ); // no timeout
 
-        return properties; 
+        return properties;
     }
 
 }

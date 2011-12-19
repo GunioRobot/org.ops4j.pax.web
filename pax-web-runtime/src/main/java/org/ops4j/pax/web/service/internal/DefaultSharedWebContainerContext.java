@@ -34,11 +34,11 @@ import org.ops4j.pax.web.service.spi.util.Path;
 import org.osgi.framework.Bundle;
 
 public class DefaultSharedWebContainerContext implements SharedWebContainerContext {
-	
+
 	private Queue<Bundle> bundles = new ConcurrentLinkedQueue<Bundle>();
 	private static final Log LOG = LogFactory.getLog( DefaultSharedWebContainerContext.class );
-	
-	
+
+
 	public boolean registerBundle(Bundle bundle) {
 		if (!bundles.contains(bundle)) {
 			bundles.add(bundle);
@@ -46,12 +46,12 @@ public class DefaultSharedWebContainerContext implements SharedWebContainerConte
 		}
 		return false;
 	}
-	
-   
+
+
     public boolean deregisterBundle(Bundle bundle) {
     	return bundles.remove(bundle);
 	}
-    
+
     public Set<String> getResourcePaths(String path) {
 		for (Bundle bundle : bundles) {
 			Set<String> paths = getResourcePaths(bundle, path);
@@ -75,15 +75,15 @@ public class DefaultSharedWebContainerContext implements SharedWebContainerConte
 		}
 		return null;
 	}
-	
+
 	private URL getResource(Bundle bundle, final String name )
     {
         final String normalizedname = Path.normalizeResourcePath( name );
         LOG.debug( "Searching bundle [" + bundle + "] for resource [" + normalizedname + "]" );
         return bundle.getResource( normalizedname );
     }
-    
-    
+
+
     private Set<String> getResourcePaths(Bundle bundle, final String name )
     {
         final String normalizedname = Path.normalizeResourcePath( name );
@@ -100,7 +100,7 @@ public class DefaultSharedWebContainerContext implements SharedWebContainerConte
         }
         return foundPaths;
     }
-	
+
 
 	public boolean handleSecurity(HttpServletRequest arg0,
 			HttpServletResponse arg1) throws IOException {

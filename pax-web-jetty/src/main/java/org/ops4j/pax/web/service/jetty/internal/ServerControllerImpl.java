@@ -97,7 +97,7 @@ class ServerControllerImpl
         }
         m_listeners.add( listener );
     }
-    
+
     public void removeListener( ServerListener listener ) {
         m_listeners.remove( listener );
     }
@@ -305,7 +305,7 @@ class ServerControllerImpl
         {
             m_jettyServer.removeErrorPage( model );
         }
-        
+
 
     	public void removeSecurityConstraintMappings(SecurityConstraintMappingModel model) {
     		m_jettyServer.removeSecurityConstraintMappings(model);
@@ -314,7 +314,7 @@ class ServerControllerImpl
 		public void addSecurityConstraintMapping(SecurityConstraintMappingModel model) {
 			m_jettyServer.addSecurityConstraintMappings(model);
 		}
-		
+
 		@Override
 		public String toString()
 		{
@@ -348,11 +348,11 @@ class ServerControllerImpl
             }
             Map<String, Object> attributes = new HashMap<String, Object>();
             attributes.put( "javax.servlet.context.tempdir", m_configuration.getTemporaryDirectory() );
-            
-            m_jettyServer.setServerConfigDir(m_configuration.getConfigurationDir()); //Fix for PAXWEB-193 
+
+            m_jettyServer.setServerConfigDir(m_configuration.getConfigurationDir()); //Fix for PAXWEB-193
             m_jettyServer.configureContext( attributes, m_configuration.getSessionTimeout(), m_configuration
                 .getSessionCookie(), m_configuration.getSessionUrl(), m_configuration.getWorkerName());
-            
+
             m_jettyServer.start();
             for( String address : addresses )
             {

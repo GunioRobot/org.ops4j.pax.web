@@ -19,7 +19,7 @@ package org.ops4j.pax.web.service;
 import org.osgi.framework.Bundle;
 
 public interface SharedWebContainerContext extends WebContainerContext {
-	
+
     boolean registerBundle(Bundle bundle);
     boolean deregisterBundle(Bundle bundle);
 

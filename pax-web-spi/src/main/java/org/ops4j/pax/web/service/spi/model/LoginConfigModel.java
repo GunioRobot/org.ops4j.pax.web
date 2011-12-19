@@ -21,8 +21,8 @@ import org.ops4j.lang.NullArgumentException;
 public class LoginConfigModel extends Model {
 
 	private final String realmName;
-	private final String authMethod;	
-	
+	private final String authMethod;
+
 	public LoginConfigModel(ContextModel contextModel, String authMethod, String realmName) {
 		super(contextModel);
 		NullArgumentException.validateNotEmpty( authMethod, "authMethod" );

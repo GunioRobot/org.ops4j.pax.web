@@ -209,7 +209,7 @@ public class ServiceModel {
 			addContextModel(model.getContextModel());
 		}
 	}
-	
+
 	public LoginConfigModel[] getLoginModels() {
 		Collection<LoginConfigModel> loginModels = m_loginConfigModels.values();
 		return loginModels.toArray(new LoginConfigModel[loginModels.size()]);
@@ -225,7 +225,7 @@ public class ServiceModel {
 			addContextModel(model.getContextModel());
 		}
 	}
-	
+
 	public SecurityConstraintMappingModel[] getSecurityConstraintMappings() {
 		Collection<SecurityConstraintMappingModel> collection = m_securityConstraintMappingModels.values();
 		return collection.toArray(new SecurityConstraintMappingModel[collection.size()]);
@@ -236,7 +236,7 @@ public class ServiceModel {
 	 * before any web components (servlets / filters / listeners / error pages)
 	 * are registered. TODO verify what happen once the web elements are
 	 * registered and then unregistered. Can still be configured?
-	 * 
+	 *
 	 * @return true, if service can be configured false otherwise
 	 */
 	public boolean canBeConfigured() {

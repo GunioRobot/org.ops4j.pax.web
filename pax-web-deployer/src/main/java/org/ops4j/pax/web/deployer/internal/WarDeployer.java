@@ -27,7 +27,7 @@ public class WarDeployer
     private static final Log LOG = LogFactory.getLog( WarDeployer.class );
 
     /**
-     * Standard PATH separator 
+     * Standard PATH separator
      */
 	private static final String PATH_SEPERATOR = "/";
 

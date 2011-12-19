@@ -14,7 +14,7 @@ Import-Package:\
 
 Export-Package:\
   ${bundle.namespace}.*; version="${pom.version}"
-  
+
 Embed-Dependency:\
   *; scope=compile; type=!pom; inline=true
 

@@ -48,7 +48,7 @@ import org.xml.sax.SAXException;
 /**
  * Web xml parserer implementation using DOM. // TODO parse and use
  * session-config
- * 
+ *
  * @author Alin Dreghiciu
  * @since 0.3.0, December 27, 2007
  */
@@ -96,7 +96,7 @@ public class DOMWebXmlParser implements WebXmlParser {
 	/**
 	 * Parses security-constraint, login-configuration and security-role out of
 	 * web.xml
-	 * 
+	 *
 	 * @param rootElement
 	 *            web.xml root element
 	 * @param webApp
@@ -219,7 +219,7 @@ public class DOMWebXmlParser implements WebXmlParser {
 
 	/**
 	 * Parses context params out of web.xml.
-	 * 
+	 *
 	 * @param rootElement
 	 *            web.xml root element
 	 * @param webApp
@@ -242,7 +242,7 @@ public class DOMWebXmlParser implements WebXmlParser {
 
 	/**
 	 * Parses session config out of web.xml.
-	 * 
+	 *
 	 * @param rootElement
 	 *            web.xml root element
 	 * @param webApp
@@ -261,7 +261,7 @@ public class DOMWebXmlParser implements WebXmlParser {
 
 	/**
 	 * Parses servlets and servlet mappings out of web.xml.
-	 * 
+	 *
 	 * @param rootElement
 	 *            web.xml root element
 	 * @param webApp
@@ -322,7 +322,7 @@ public class DOMWebXmlParser implements WebXmlParser {
 
 	/**
 	 * Parses filters and filter mappings out of web.xml.
-	 * 
+	 *
 	 * @param rootElement
 	 *            web.xml root element
 	 * @param webApp
@@ -392,7 +392,7 @@ public class DOMWebXmlParser implements WebXmlParser {
 
 	/**
 	 * Parses listsners out of web.xml.
-	 * 
+	 *
 	 * @param rootElement
 	 *            web.xml root element
 	 * @param webApp
@@ -413,7 +413,7 @@ public class DOMWebXmlParser implements WebXmlParser {
 
 	/**
 	 * Parses error pages out of web.xml.
-	 * 
+	 *
 	 * @param rootElement
 	 *            web.xml root element
 	 * @param webApp
@@ -438,7 +438,7 @@ public class DOMWebXmlParser implements WebXmlParser {
 
 	/**
 	 * Parses welcome files out of web.xml.
-	 * 
+	 *
 	 * @param rootElement
 	 *            web.xml root element
 	 * @param webApp
@@ -459,7 +459,7 @@ public class DOMWebXmlParser implements WebXmlParser {
 
 	/**
 	 * Parses mime mappings out of web.xml.
-	 * 
+	 *
 	 * @param rootElement
 	 *            web.xml root element
 	 * @param webApp
@@ -482,10 +482,10 @@ public class DOMWebXmlParser implements WebXmlParser {
 
 	/**
 	 * Returns the text content of an element or null if the element is null.
-	 * 
+	 *
 	 * @param element
 	 *            the som elemet form which the contet should be retrieved
-	 * 
+	 *
 	 * @return text content of element
 	 */
 	private static String getTextContent(final Element element) {

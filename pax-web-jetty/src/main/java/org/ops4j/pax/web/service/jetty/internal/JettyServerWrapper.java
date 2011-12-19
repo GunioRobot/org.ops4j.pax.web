@@ -110,7 +110,7 @@ class JettyServerWrapper extends Server
     }
 
     private ServletContextHandler addContext( final Model model )
-    { 
+    {
     	ServletContextHandler context = new HttpServiceContext( (HandlerContainer) getHandler(), model.getContextModel().getContextParams(),
                                                   getContextAttributes(
                                                       BundleUtils.getBundleContext( model.getContextModel().getBundle()
@@ -141,14 +141,14 @@ class JettyServerWrapper extends Server
             workerName = m_sessionWorkerName;
         }
         configureSessionManager( context, sessionTimeout, sessionCookie, sessionUrl, workerName );
-        
-        //PAXWEB-210 
+
+        //PAXWEB-210
         //configure Authentication and realm - has to be configured before it is started
         String realmName = model.getContextModel().getRealmName();
         String authMethod = model.getContextModel().getAuthMethod();
         if (realmName != null && authMethod != null)
         	configureSecurity(context, realmName, authMethod);
-        
+
         LOG.debug( "Added servlet context: " + context );
         if( isStarted() )
         {
@@ -179,9 +179,9 @@ class JettyServerWrapper extends Server
     }
 
 	/**
-	 * Sets the security authentication method and the realm name on the security handler. 
-	 * This has to be done before the context is started. 
-	 * 
+	 * Sets the security authentication method and the realm name on the security handler.
+	 * This has to be done before the context is started.
+	 *
 	 * @param context
 	 * @param realmName
 	 * @param authMethod
@@ -207,7 +207,7 @@ class JettyServerWrapper extends Server
 		securityHandler.setAuthenticator(authenticator);
 
 		securityHandler.setRealmName(realmName);
-		
+
 	}
 
 	/**
@@ -249,7 +249,7 @@ class JettyServerWrapper extends Server
         LOG.debug( "configureSessionManager for context [" + context + "] using - timeout:" + minutes
                    + ", cookie:" + cookie + ", url:" + url + ", workerName:" + workerName
         );
-        
+
         final SessionHandler sessionHandler = context.getSessionHandler();
         if( sessionHandler != null )
         {

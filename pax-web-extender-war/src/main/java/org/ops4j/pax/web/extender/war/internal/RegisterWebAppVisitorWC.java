@@ -117,7 +117,7 @@ class RegisterWebAppVisitorWC
         		visit(loginConfig); //TODO: what about more than one login config? shouldn't it be just one?
         	}
         }
-        	
+
         // set session timeout
         if( webApp.getSessionTimeout() != null )
         {
@@ -163,7 +163,7 @@ class RegisterWebAppVisitorWC
         {
             LOG.error( "Registration exception. Skipping.", ignore );
         }
-        
+
         // register JSP support
         try
         {
@@ -316,8 +316,8 @@ class RegisterWebAppVisitorWC
 		NullArgumentException.validateNotNull(loginConfig, "Web app login config");
 		try {
 			m_webContainer.registerLoginConfig(
-				loginConfig.getAuthMethod(), 
-				loginConfig.getRealmName(), 
+				loginConfig.getAuthMethod(),
+				loginConfig.getRealmName(),
 				m_httpContext
 			);
 		} catch( Throwable ignore ) {
@@ -329,7 +329,7 @@ class RegisterWebAppVisitorWC
 		NullArgumentException.validateNotNull(constraintMapping, "Web app constraint mappings");
 		try {
 			WebAppSecurityConstraint securityConstraint = constraintMapping.getSecurityConstraint();
-			
+
 			m_webContainer.registerConstraintMapping(
 					constraintMapping.getConstraintName(),
 					constraintMapping.getUrl(),

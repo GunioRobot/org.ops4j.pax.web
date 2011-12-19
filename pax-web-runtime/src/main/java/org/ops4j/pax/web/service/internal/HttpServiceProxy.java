@@ -261,7 +261,7 @@ public class HttpServiceProxy
 			HttpContext httpContext) {
 		LOG.debug("Registering constraint mapping for [ "+constraintName+" ] ");
 		m_delegate.registerConstraintMapping(constraintName, url, mapping, dataConstraint, authentication, roles , httpContext);
-		
+
 	}
 
 	public void unregisterConstraintMapping(final HttpContext httpContext) {

@@ -65,7 +65,7 @@ class HttpServiceStopped implements StoppableHttpService {
 
 	/**
 	 * Does nothing.
-	 * 
+	 *
 	 * @see WebContainer#registerServlet(Servlet, String[], Dictionary,
 	 *      HttpContext)
 	 */
@@ -77,7 +77,7 @@ class HttpServiceStopped implements StoppableHttpService {
 
 	/**
 	 * Does nothing.
-	 * 
+	 *
 	 * @see WebContainer#registerServlet(javax.servlet.Servlet, String,
 	 *      String[],java.util.Dictionary,org.osgi.service.http.HttpContext)
 	 */
@@ -90,7 +90,7 @@ class HttpServiceStopped implements StoppableHttpService {
 
 	/**
 	 * Does nothing.
-	 * 
+	 *
 	 * @see WebContainer#unregisterServlet(Servlet)
 	 */
 	public void unregisterServlet(final Servlet servlet) {
@@ -99,7 +99,7 @@ class HttpServiceStopped implements StoppableHttpService {
 
 	/**
 	 * Does nothing.
-	 * 
+	 *
 	 * @see WebContainer#registerEventListener(java.util.EventListener,
 	 *      HttpContext)
 	 */
@@ -110,7 +110,7 @@ class HttpServiceStopped implements StoppableHttpService {
 
 	/**
 	 * Does nothing.
-	 * 
+	 *
 	 * @see WebContainer#unregisterEventListener(java.util.EventListener)
 	 */
 	public void unregisterEventListener(final EventListener listener) {
@@ -196,7 +196,7 @@ class HttpServiceStopped implements StoppableHttpService {
 		LOG.warn("Http service has already been stopped");
 	}
 
-	
+
 	/**
 	 * @see WebContainer#registerLoginConfig()
 	 */
@@ -204,7 +204,7 @@ class HttpServiceStopped implements StoppableHttpService {
 		LOG.warn("Http service has already been stopped");
 	}
 
-	
+
 	/**
 	 * @see WebContainer#unregisterLoginConfig()
 	 */

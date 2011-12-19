@@ -75,7 +75,7 @@ class WebXmlObserver
         m_publisher = publisher;
         m_publishedWebApps = new HashMap<URL, WebApp>();
     }
-    
+
     /**
      * Parse the web.xml and publish the corresponding web app.
      * The received list is expected to contain one URL of an web.xml (only frst is used.
@@ -133,11 +133,11 @@ class WebXmlObserver
                 }
 
                 webApp.setContextName( contextName );
-                
+
                 LOG.info( String.format( "Using [%s] as web application context name", contextName ) );
 
                 String rootPath = (String) bundle.getHeaders().get( "Webapp-Root" );
-                
+
                 if( rootPath == null )
                 {
                 	LOG.debug( "No 'Webapp-Root' manifest attribute specified" );
@@ -148,15 +148,15 @@ class WebXmlObserver
                 {
                 	rootPath = rootPath.substring(0, rootPath.length() - 1);
                 }
-                
+
                 if( rootPath.startsWith( "/" ) )
                 {
                 	rootPath = rootPath.substring( 1 );
                 }
-                
+
                 rootPath = rootPath.trim();
                 webApp.setRootPath( rootPath );
-                
+
                 LOG.info( String.format( "Using [%s] as web application root path", rootPath ) );
 
                 m_publisher.publish( webApp );

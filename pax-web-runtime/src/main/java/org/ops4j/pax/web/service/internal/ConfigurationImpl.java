@@ -180,7 +180,7 @@ public class ConfigurationImpl extends PropertyStore
         }
         return get( PROPERTY_TEMP_DIR );
     }
-    
+
 	public File getConfigurationDir() {
 		try
         {
@@ -200,7 +200,7 @@ public class ConfigurationImpl extends PropertyStore
                 {
 					LOG.debug("Reading from configured path for the configuration property "
 							+ PROPERTY_SERVER_CONFIGURATION_FILE + " has failed");
-                }				
+                }
                 return set( PROPERTY_SERVER_CONFIGURATION_FILE, configurationFile );
             }
         }

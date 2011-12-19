@@ -74,17 +74,17 @@ public interface WebAppVisitor
      */
     void visit( WebAppErrorPage webAppErrorPage );
 
-    
+
 	/**
 	 * Called once for each login config element
-	 * 
+	 *
 	 * @param loginConfig visited login config
 	 */
 	void visit(WebAppLoginConfig loginConfig);
 
 	/**
 	 * Called once for each constraint mapping element
-	 * 
+	 *
 	 * @param constraintMapping visited constraint mapping
 	 */
 	void visit(WebAppConstraintMapping constraintMapping);

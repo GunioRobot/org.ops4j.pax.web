@@ -142,7 +142,7 @@ public class ServletTracker
         DefaultServletMapping mapping = new DefaultServletMapping();
         mapping.setHttpContextId( (String) httpContextId );
         mapping.setServlet( published );
-        if(servletName != null) 
+        if(servletName != null)
         {
           mapping.setServletName(servletName.toString().trim());
         }

@@ -104,7 +104,7 @@ public interface Configuration
 
 	/**
 	 * Returns the directory containing the external configuration
-	 * 
+	 *
 	 * @return
 	 */
 	File getConfigurationDir();

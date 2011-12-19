@@ -19,7 +19,7 @@ Embed-Dependency:\
   *; scope=compile; type=!pom; inline=true
 
 Embed-Transitive:\
-  true  
+  true
 
 -removeheaders:\
   Include-Resource,\

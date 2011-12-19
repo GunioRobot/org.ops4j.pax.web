@@ -108,8 +108,8 @@ class WebAppHttpContext implements HttpContext
      */
     public URL getResource( final String name )
     {
-        final String normalizedName = Path.normalizeResourcePath( m_rootPath + ( name.startsWith("/") ? "" : "/" ) + name );        
-        
+        final String normalizedName = Path.normalizeResourcePath( m_rootPath + ( name.startsWith("/") ? "" : "/" ) + name );
+
         LOG.debug(
             "Searching bundle [" + m_bundle + "] for resource [" + name + "], normalized to [" + normalizedName + "]"
         );

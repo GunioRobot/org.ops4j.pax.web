@@ -18,7 +18,7 @@
 
   <properties>
     <bundle.symbolicName>org.ops4j.pax.web.samples.jetty.config</bundle.symbolicName>
-  </properties>  
+  </properties>
 
   <build>
     <plugins>

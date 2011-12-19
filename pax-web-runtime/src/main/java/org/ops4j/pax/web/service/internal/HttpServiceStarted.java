@@ -559,7 +559,7 @@ class HttpServiceStarted implements StoppableHttpService {
 		NullArgumentException.validateNotNull(httpContext, "Http context");
 		//NOP
 	}
-	
+
 	private ContextModel getOrCreateContext(final HttpContext httpContext) {
 		HttpContext context = httpContext;
 		if (context == null) {

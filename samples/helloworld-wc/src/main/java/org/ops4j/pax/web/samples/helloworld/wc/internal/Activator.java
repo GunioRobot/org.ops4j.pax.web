@@ -45,11 +45,11 @@ public final class Activator implements BundleActivator
     public void start( BundleContext bc ) throws Exception
     {
         /**
-         * The pax-web-war service can take a little longer to start, we can't say how much it will take, 
+         * The pax-web-war service can take a little longer to start, we can't say how much it will take,
          * so we do need to sit down a while and wait it's availability in order to use it's reference.
-         * 
+         *
          * This is a MUST, it's really important - mostly when using the config.ini file (Equinox).
-         * 
+         *
          * Anaximandro April 19, 2010.
          */
         int counter = 0;
@@ -165,7 +165,7 @@ public final class Activator implements BundleActivator
                 if( counter > 10 ) {
                     throw new Exception( "Could not start the helloworld-wc service, WebContainer service not started or not available." );
                 }
-                else 
+                else
                 {
                    counter++;
                    Thread.sleep( counter * 1000 );

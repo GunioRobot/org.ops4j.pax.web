@@ -17,7 +17,7 @@ Private-Package:\
   ${bundle.namespace}.internal.*
 
 Embed-Dependency:\
-  *; scope=runtime; type=!pom  
+  *; scope=runtime; type=!pom
 
 -removeheaders:\
   Private-Package,\

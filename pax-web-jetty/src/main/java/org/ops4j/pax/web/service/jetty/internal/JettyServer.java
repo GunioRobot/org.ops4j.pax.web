@@ -85,9 +85,9 @@ public interface JettyServer
 	void addSecurityConstraintMappings(SecurityConstraintMappingModel model);
 
 	void removeSecurityConstraintMappings(SecurityConstraintMappingModel model);
-	
+
 	void setServerConfigDir(File serverConfigDir);
-	
-	File getServerConfigDir(); 
+
+	File getServerConfigDir();
 
 }

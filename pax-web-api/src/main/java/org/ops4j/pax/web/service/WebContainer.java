@@ -248,25 +248,25 @@ public interface WebContainer
      * @since 0.3.0, January 16, 2007
      */
     void unregisterWelcomeFiles( HttpContext httpContext );
-    
+
     /**
-     * Registers login configuration, with authorization method and realm name.  
-     * 
+     * Registers login configuration, with authorization method and realm name.
+     *
      * @param authMethod
      * @param realmName
      * @param httpContext
      */
     void registerLoginConfig(String authMethod, String realmName, HttpContext httpContext);
-    
+
     /**
      * Unregisters login configuration ....
-     * @param httpContext 
+     * @param httpContext
      */
-    void unregisterLoginConfig(HttpContext httpContext); 
-    
+    void unregisterLoginConfig(HttpContext httpContext);
+
     /**
      * Registers constraint mappings....
-     * 
+     *
      * @param constraintName
      * @param mapping
      * @param url
@@ -275,15 +275,15 @@ public interface WebContainer
      * @param roles
      * @param m_httpContext
      */
-    void registerConstraintMapping(String constraintName, String mapping, String url, String dataConstraint, boolean authentication, List<String> roles, HttpContext m_httpContext); 
-    
+    void registerConstraintMapping(String constraintName, String mapping, String url, String dataConstraint, boolean authentication, List<String> roles, HttpContext m_httpContext);
+
     /**
      * Unregisters constraint mappings....
-     * @param httpContext 
+     * @param httpContext
      */
     void unregisterConstraintMapping(HttpContext httpContext);
-    
-    
+
+
     SharedWebContainerContext getDefaultSharedHttpContext();
-    
+
 }

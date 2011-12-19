@@ -69,7 +69,7 @@ class JettyServerImpl implements JettyServer {
 			URL jettyResource = getClass().getResource("/jetty.xml");
 			File serverConfigurationFile = getServerConfigDir();
 			if (serverConfigurationFile != null) {
-				if (LOG.isDebugEnabled()) 
+				if (LOG.isDebugEnabled())
 					LOG.debug("found server configuration file: "+serverConfigurationFile);
 				if (!serverConfigurationFile.isDirectory() && serverConfigurationFile.canRead()) {
 					if (LOG.isDebugEnabled()) {
@@ -121,7 +121,7 @@ class JettyServerImpl implements JettyServer {
 
 	/**
 	 * {@inheritDoc}
-	 * @param userRealm 
+	 * @param userRealm
 	 */
 	public void configureContext(final Map<String, Object> attributes,
 			final Integer sessionTimeout, final String sessionCookie,
@@ -400,7 +400,7 @@ class JettyServerImpl implements JettyServer {
 		String dataConstraint = model.getDataConstraint();
 		List<String> roles = model.getRoles();
 		boolean authentication = model.isAuthentication();
-		
+
 		ConstraintMapping newConstraintMapping = new ConstraintMapping();
 		newConstraintMapping.setMethod(mappingMethod);
 		newConstraintMapping.setPathSpec(url);
@@ -408,7 +408,7 @@ class JettyServerImpl implements JettyServer {
 		constraint.setAuthenticate(authentication);
 		constraint.setName(constraintName);
 		constraint.setRoles(roles.toArray(new String[roles.size()]));
-		
+
 		if (dataConstraint == null || "NONE".equals(dataConstraint))
             constraint.setDataConstraint(Constraint.DC_NONE);
         else if ("INTEGRAL".equals(dataConstraint))
@@ -420,9 +420,9 @@ class JettyServerImpl implements JettyServer {
             LOG.warn("Unknown user-data-constraint:" + dataConstraint);
             constraint.setDataConstraint(Constraint.DC_CONFIDENTIAL);
         }
-		
+
 		newConstraintMapping.setConstraint(constraint);
-		
+
 		((ConstraintSecurityHandler)securityHandler).addConstraintMapping(newConstraintMapping);
 	}
 
@@ -433,17 +433,17 @@ class JettyServerImpl implements JettyServer {
 			throw new IllegalStateException(
 					"Internal error: Cannot find the security handler. Please report.");
 		}
-		
+
 		List<ConstraintMapping> constraintMappings = ((ConstraintSecurityHandler)securityHandler).getConstraintMappings();
 		for (ConstraintMapping constraintMapping : constraintMappings) {
-			boolean urlMatch = constraintMapping.getPathSpec().equalsIgnoreCase(model.getUrl());			
+			boolean urlMatch = constraintMapping.getPathSpec().equalsIgnoreCase(model.getUrl());
 			boolean methodMatch = constraintMapping.getMethod().equalsIgnoreCase(model.getMapping());
 			if (urlMatch && methodMatch)
 				constraintMappings.remove(constraintMapping);
 		}
 	}
 
-	
+
 
 	@Override
 	public String toString() {

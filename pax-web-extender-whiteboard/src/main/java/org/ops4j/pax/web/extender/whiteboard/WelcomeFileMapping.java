@@ -2,7 +2,7 @@ package org.ops4j.pax.web.extender.whiteboard;
 
 /**
  * Welcome file mapping
- * 
+ *
  * @author dsklyut
  * @since 0.7.0
  */
